@@ -1,0 +1,232 @@
+---
+title: BlogApp
+---
+
+# BlogApp- graphQl- next.js, tailwind.css
+> This one is simiar to which I used [Gatsby](https://www.gatsbyjs.com/). (please use Gatsby for our blogs page)
+
+1- Graph Data fetch
+2- dispaly postes
+3- widdget component
+4- categories
+5- articles details
+6- comments
+7 challange
+8- deployment
+
+
+
+
+## **Graph Data fetch**
+
+1- Open graphcms and create Account ....
+
+
+https://graphcms.com/
+
+
+2- create new blank project from graphcms
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646569835411_Screen+Shot+2022-03-06+at+2.29.29+PM.png)
+
+
+3- add project name and project description then create project
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646570030886_Screen+Shot+2022-03-06+at+2.32.58+PM.png)
+
+
+4- select free plan then invite team member 
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646570185843_Screen+Shot+2022-03-06+at+2.36.11+PM.png)
+
+
+5- setup schema 
+create model 
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646570636078_Screen+Shot+2022-03-06+at+2.43.11+PM.png)
+
+
+6- add field with choose (single line text)
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646570896789_Screen+Shot+2022-03-06+at+2.48.06+PM.png)
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646570922926_Screen+Shot+2022-03-06+at+2.48.29+PM.png)
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646570985533_Screen+Shot+2022-03-06+at+2.49.34+PM.png)
+
+
+ 6- to find image add (Acid picker)
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646571218083_Screen+Shot+2022-03-06+at+2.53.19+PM.png)
+
+
+7- create muliti line text to add description 
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646571318688_Screen+Shot+2022-03-06+at+2.55.07+PM.png)
+
+
+ 8- the we can also create second model (Category)
+
+- add single line (name)
+- add slug (Url friendely )
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646571613423_Screen+Shot+2022-03-06+at+2.59.57+PM.png)
+
+
+9- Create new model Comment
+
+- add single line test "Name"
+- add another single line text "Email"
+- add muliti text line "Comment" 
+
+
+10 - we need to create main model 
+
+- create model called "post "
+- add single line "Title"
+- add also Slug "slug"
+- add muliti line "Excerpt"
+- add rich text "Content"
+- add asset picker "Feature Image"
+- add bloean "Feature post"
+
+
+
+## we need else to connection or relations with Graph cms by reatation field :
+
+
+- add refrance (Auther & Category)
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646572631168_Screen+Shot+2022-03-06+at+3.16.30+PM.png)
+
+
+Now here we can create all different users postes or comments 
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646573002033_Screen+Shot+2022-03-06+at+3.22.07+PM.png)
+
+
+
+
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646573244890_Screen+Shot+2022-03-06+at+3.27.14+PM.png)
+
+
+ 11- create category we need some data fetch we need at least to add one      auther ine category and one post
+     when we add post we can also add (title , slug, react , testing )
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646574435969_Screen+Shot+2022-03-06+at+3.47.00+PM.png)
+
+
+then we have one Author , one category and one post 
+
+
+#  we need to go on visual studo code
+
+
+- frist go to desctop pc and create new folder "MS_Blog"
+- open VS code with empty project and drag and drop folder created "MS_Blog"
+- open terminal (view - terminal ) 
+- we need intializing a new next.js app by runing 
+    npx create-next-app -e with-tailwindcss ./
+
+
+## now we initilized and have new application with next.js and include tailwind.css 
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646575277961_Screen+Shot+2022-03-06+at+4.00.57+PM.png)
+
+##  before we start to run it we need necessary dependencies we can do that with this command 
+
+ 
+
+    npm install graphql graphql-request html-react-parser moment react-multi-carousel sass
+
+ 
+ finally run application 
+ 
+
+     npm run dev
+
+ 
+ we can see it in localhost
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646581321549_Screen+Shot+2022-03-06+at+5.41.47+PM.png)
+
+
+in our project we have main folder 
+main pages and next js folder
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646581506632_Screen+Shot+2022-03-06+at+5.44.53+PM.png)
+
+
+_app.js ...... to write component here 
+api ...... we can create entire apiswithoud everyneeding the backend
+publick folder ... use for deploymentand publishing 
+
+and then we can crate more foldees like componets folder context and esction we start now to creat in index.js 
+
+
+
+# index.js 
+- we will remove main tages without head 
+- add in calss name in head we can search and learn more about it in tailwind.css component
+    className="container mx-auto px-10 mb-8"
+-  change blockchain "MS Blog"
+- we will do our home component 
+- create list of featch data to our post (const post list of array and each post is an opject)
+    const posts = [
+      {title: 'React Testing' , excerpt:'Learn React Testing'},
+      {title: 'React with tailwind' , excerpt:'Learn React with tailwind'},
+    ]
+- we will map all of them 
+    {posts.map((post, index) => (
+                <div >
+                  {post.title}
+                  {post.excerpt}
+                </div>
+              ))}
+
+ run app 
+
+    npm run dev 
+
+   
+
+#    to create right side (post and categories) we will go to create component folder :
+        postcard.jsx
+        postcard.jsx
+        postwidget.jsx
+#  post widget.jsx
+-  install extention in VsCODE "snippets". 
+     ES7+ React/Redux/React-Native snippets
+- use extention function with rafce (react function component) in postcard , categories ,postwidget
+
+
+
+![](https://paper-attachments.dropbox.com/s_43881BA57BA7F5550E31AEE0F8D69CFF4A4603BD91D393C088F52EF3D26950D6_1646597416599_Screen+Shot+2022-03-06+at+10.09.58+PM.png)
+
+
+
+
+# Change style with tailwindcss 
+
+1- create nav bar 
+
+- create file name "header.jsx" in components folder
+- rafce function 
+- in index.js add 
+
+
+    export {default as Header } from './Header';
+
+
+- add nav code in index.js file 
+    <div className="container mx-auto px-10 mb-8">
+            <div className="border-b w-full inline-block border-blue-400 py-8">
+                <div className="md:float-left block">
+                <Link href="/">
+                <span className="cursor-pointer font-bold text-4xl text-white">Ms-hack</span>
+              </Link>
+                </div>
+            </div>
+        </div> 
+
+
+
+

@@ -1,8 +1,8 @@
 // gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `MS-hack Home Page`,
-    description: `We provide professional blockchains, smart contracts, and dapps services.`,
+    title: `Inst2NFT Home Page`,
+    description: `Welcome to use our convert anything to NFTs services.`,
     author: `@mingderwang`,
   },
   plugins: [
