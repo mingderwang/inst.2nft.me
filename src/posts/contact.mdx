@@ -2,7 +2,16 @@
 title: Contacts
 date: 2022-03-14
 ---
+
+export default ({ children }) => (
+  <div>
+    <h1>My Layout</h1>
+    <div>{children}</div>
+  </div>
+)
+
 import Confetti from 'react-confetti'
+import { SketchPicker } from "react-color"
 
 ```json
 {
@@ -15,3 +24,7 @@ import Confetti from 'react-confetti'
       width="4000"
       height="500"
     />
+
+Here's a color picker!
+
+<SketchPicker />
